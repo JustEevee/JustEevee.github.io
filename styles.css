@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     background-color: #121212;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Lora', serif; /* Changing to a more elegant font */
 }
 
 .container {
@@ -12,19 +12,27 @@ body, html {
     align-items: center;
     justify-content: center;
     height: 100%;
+    text-align: center; /* Centering the header text */
 }
 
 header {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Slightly larger font for the header */
+    margin: 20px 0;
+    font-family: 'Merriweather', serif; /* A distinct, elegant font for headers */
 }
 
 .story-viewer {
     border: 1px solid #333;
-    padding: 20px;
+    padding: 40px; /* Increased padding for better text framing */
     width: 60%;
     height: 50%;
     overflow-y: auto;
+    text-align: justify; /* Justify aligns text for a cleaner look */
+    display: flex;
+    align-items: center; /* Centering text vertically */
+    justify-content: center; /* Centering text horizontally */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    line-height: 1.6; /* Improved line spacing for readability */
 }
 
 .navigation button {

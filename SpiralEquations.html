@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Spiral Equation List</title>
+    <link rel="stylesheet" href="./EquationStyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-..." crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Idle Spiral Equation List</h1>
+    </header>
+
+    <div class="equation-container">
+        <div class="equation-name-small">Raw</div>
+        <div class="separator-small"></div>
+        <div class="equation-raw-explanation">
+            The Value you see in each Tile / under Total Reward
+        </div>
+    </div>
+
+
+    <div class="equation-container">
+        <div class="equation-name">Attack Speed Battle Reward</div>
+        <div class="separator"></div>
+        <div class="equation">
+        \begin{cases} 
+        1 + \text{raw} & \text{| } \text{raw} < 4 \\
+        \sqrt[3]{17.5 + \text{raw} + 55} & \text{| } \text{raw} \geq 4 
+        \end{cases}
+        </div>
+    </div>
+    <div class="equation-container">
+        <div class="equation-name">Rare Chance Battle Reward</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \begin{cases} 
+            1 + \text{raw} & \text{| } \text{raw} < 0.5 \\
+            1.5 + 0.05 * (\text{raw} + 0.5) & \text{| } 0.5 \leq \text{raw} < 5.5 \\
+            1.75 + 0.001 * (\text{raw} - 5.5) & \text{| } raw \geq 5.5
+            \end{cases}
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Rare Chance 2 Loot</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \begin{cases} 
+            1 + \text{raw} & \text{| } \text{raw} \leq 1 \\
+            1 + \sqrt[3.5]{\text{raw}} & \text{| } \text{raw} > 1 \\
+            \end{cases}
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Loot Progress Multiplier Battle Reward</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \begin{cases} 
+            1 + \text{raw} & \text{| } \text{raw} \leq 2 \\
+            1 + \sqrt[4.5]{4 * \text{raw}} & \text{| } \text{raw} > 2 \\
+            \end{cases}
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Attack Speed 2 Loot</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \[
+            \text{AttackSpeed2} = 
+            \begin{cases} 
+            1 + \text{raw} & \text{if } \text{raw} \leq 1 \\
+            1 + \sqrt{\text{raw}} & \text{if } \text{raw} > 1 
+            \end{cases}
+            \]
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Attack Speed 2 Contribution</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \begin{cases} 
+            \text{AttackSpeed2} & \text{| } \text {AttackSpeed2} \leq 1 \\
+            1 + \ln(1+1.02 * (\text{AttackSpeed2}-1)) & \text{| } \text {AttackSpeed2} > 1
+            \end{cases}
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Equation Speed Loot</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \begin{cases} 
+            \text{raw} & \text{| } \text {raw} \leq 2 \\
+            2 + \ln(1+1.2 * (\text{raw}-1)) & \text{| } \text {raw} > 2
+            \end{cases}
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Study Progress Battle Reward</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \begin{cases} 
+            1 + \text{raw} & \text{| } \text {raw} \leq 9 \\
+            10 + \sqrt[3.8]{81 * \text{raw}} & \text{| } \text {raw} > 9
+            \end{cases}
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Bonfire Passive Effect</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \[
+            \text{1.2 * PassiveMultiplier } * 
+            \begin{cases} 
+            1 + \text{seconds} / 7776000 & \text{| } \text{seconds} / 7776000 \leq 4 \\
+            4 + ln(1 + 0.1 * (\text{seconds} / 7776000) - 1 ) & \text{| } \text{seconds} / 7776000 > 4 
+            \end{cases}
+            \]
+        </div>
+    </div>
+
+    <div class="equation-container">
+        <div class="equation-name">Loot Progress Multiplier from Difficulty</div>
+        <div class="separator"></div>
+        <div class="equation">
+            \begin{cases} 
+            1 + \text{diff} / 10000 & \text{| } \text{diff} / 10000 \leq 8 \\
+            11 - 2 * 1.15^{8 - \text{diff} / 10000} & \text{| } \text{diff} / 10000 > 8
+            \end{cases}
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>Made by Eevee</p>
+    </footer>
+</body>
+</html>

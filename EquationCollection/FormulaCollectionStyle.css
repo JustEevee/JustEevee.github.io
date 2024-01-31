@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "BIZ";
+  src: url(./BIZ_UDPMincho.ttf);
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    scrollbar-color: #666 #333;
+    scrollbar-width: thin; /* Adjust the width as needed */
+}
+
+/* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #333; /* Track background color */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #666; /* Scrollbar thumb color */
+    border-radius: 6px; /* Round the scrollbar thumb */
+  }
+  
+
+.bordered-header, .bordered-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+#header-text {
+    font-size: 32px;
+    font-family: "BIZ";
+    letter-spacing: 5px;
+}
+
+.bordered-header {
+    border-bottom: 1px solid #444;
+}
+
+.bordered-footer {
+    border-top: 1px solid #444;
+    margin-top: auto;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #252525;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.styled-button-equation-group {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: "BIZ";
+    color: #FFF;
+    background-color: #1E88E5;
+    border: none;
+    cursor: pointer;
+}
+
+#equationContainer {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Equation {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    display: none; /* Initially hide all equations */
+}
+
+.equation-header {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.equation-formula {
+    font-style: italic;
+}
+
+.rainbow {
+    text-align: center;
+    
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+    animation: colorRotate 6s linear 0s infinite;
+  }
+  
+  @keyframes colorRotate {
+    from {
+      color: #6666ff;
+    }
+    10% {
+      color: #0099ff;
+    }
+    50% {
+      color: #00ff00;
+    }
+    75% {
+      color: #ff3399;
+    }
+    100% {
+      color: #6666ff;
+    }
+  }
+

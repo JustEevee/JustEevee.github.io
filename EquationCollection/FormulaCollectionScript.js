@@ -29,14 +29,3 @@ document.querySelectorAll('.styled-button-equation-group').forEach(button => {
         }
     });
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-
-    menuToggle.addEventListener('click', function () {
-        sidebar.classList.toggle('active');
-        content.classList.toggle('shifted');
-    });
-});

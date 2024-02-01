@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Spiral Equation Collection</title>
+    <link rel="stylesheet" href="FormulaCollectionStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-..." crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="bordered-header">
+        <button id="menu-toggle" class="menu-toggle">☰</button> <!-- Menu toggle button -->
+        <h1 id="header-text">Idle Spiral Equation Collection</h1>
+    </header>
+    <div class="page-wrapper"> <!-- Wrapper for content, helps in sliding effect -->
+        <div class="sidebar" id="sidebar">
+            <!-- Existing sidebar content -->
+            <!-- Place your sidebar content here -->
+            
+            <div class="Equation-Group">
+                <button class="styled-button-equation-group">Attack Speed Formulas</button>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Attack Speed Battle Reward (Gamma)</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        1 + \text{raw} & \text{| } \text{raw} < 4 \\
+                        \sqrt[3]{17.5 + \text{raw} + 55} & \text{| } \text{raw} \geq 4 
+                        \end{cases}
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Attack Speed 2 Loot</div>
+                    <div class="equation-formula">
+                        \[
+                        \text{AttackSpeed2} = 
+                        \begin{cases} 
+                        1 + \text{raw} & \text{if } \text{raw} \leq 1 \\
+                        1 + \sqrt{\text{raw}} & \text{if } \text{raw} > 1 
+                        \end{cases}
+                        \]
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Attack Speed 2 Contribution</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        \text{AttackSpeed2} & \text{| } \text {AttackSpeed2} \leq 1 \\
+                        1 + \ln(1+1.02 * (\text{AttackSpeed2}-1)) & \text{| } \text {AttackSpeed2} > 1
+                        \end{cases}
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Attack Speed 3 Battle Reward (Alphabetician)</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        1 + \text{raw} & \text{| } \text {AttackSpeed2} \leq 3 \\
+                        1 + 3^{3/8}\sqrt[9]{\text{raw}} & \text{| } \text {AttackSpeed2} > 3
+                        \end{cases}
+                    </div>
+                </div>
+            </div>
+            <!-- Equation Group Separator for Visibility -->
+            <div class="Equation-Group">
+                <button class="styled-button-equation-group">Spiral Equation</button>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Equation Speed Battle Reward (Fiba)</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        \text{raw} & \text{| } \text {raw} \leq 2 \\
+                        \sqrt[3.8]{3^{3.8-1}*\text{raw}} & \text{| } \text {raw} > 2
+                        \end{cases}
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Equation Speed Loot</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        \text{raw} & \text{| } \text {raw} \leq 2 \\
+                        2 + \ln(1+1.2 * (\text{raw}-1)) & \text{| } \text {raw} > 2
+                        \end{cases}
+                    </div>
+                </div>
+            </div>
+            <!-- Equation Group Separator for Visibility -->
+            <div class="Equation-Group">
+                <button class="styled-button-equation-group">Rare Drop Rate</button>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Rare Chance Battle Reward (Pentangle)</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        1 + \text{raw} & \text{| } \text{raw} < 0.5 \\
+                        1.5 + 0.05 * (\text{raw} + 0.5) & \text{| } 0.5 \leq \text{raw} < 5.5 \\
+                        1.75 + 0.001 * (\text{raw} - 5.5) & \text{| } raw \geq 5.5
+                        \end{cases}
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Rare Chance 2 Loot</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        1 + \text{raw} & \text{| } \text{raw} \leq 1 \\
+                        1 + \sqrt[3.5]{\text{raw}} & \text{| } \text{raw} > 1 \\
+                        \end{cases}
+                    </div>
+                </div>
+            </div>
+            <!-- Equation Group Separator for Visibility -->
+            <div class="Equation-Group">
+                <button class="styled-button-equation-group">Theory / Loot</button>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Study Progress Battle Reward (SPi)</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        1 + \text{raw} & \text{| } \text {raw} \leq 9 \\
+                        10 + \sqrt[3.8]{81 * \text{raw}} & \text{| } \text {raw} > 9
+                        \end{cases}
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Loot Progress Multiplier Battle Reward (Li)</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        1 + \text{raw} & \text{| } \text{raw} \leq 2 \\
+                        1 + \sqrt[4.5]{4 * \text{raw}} & \text{| } \text{raw} > 2 \\
+                        \end{cases}
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Loot Progress Multiplier from Difficulty</div>
+                    <div class="equation-formula">
+                        \begin{cases} 
+                        1 + \text{diff} / 10000 & \text{| } \text{diff} / 10000 \leq 8 \\
+                        11 - 2 * 1.15^{8 - \text{diff} / 10000} & \text{| } \text{diff} / 10000 > 8
+                        \end{cases}
+                    </div>
+                </div>
+            </div>
+            <!-- Equation Group Separator for Visibility -->
+            <div class="Equation-Group">
+                <button class="styled-button-equation-group">Spiral Designs (DLC-Spirals)</button>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Bonfire Passive Effect</div>
+                    <div class="equation-formula">
+                        \[
+                        \begin{cases} 
+                        1 + \text{exp} / 7776000 & \text{| } \text{exp} / 7776000 \leq 4 \\
+                        5 + ln(1 + 0.1 * (\text{exp} / 7776000) - 4 ) & \text{| } \text{exp} / 7776000 > 4 
+                        \end{cases}
+                        \]
+                    </div>
+                </div>
+                <div class="Equation" style="display: none;">
+                    <div class="equation-header">Railway Passive Effect</div>
+                    <div class="equation-formula">
+                        \[
+                        \begin{cases} 
+                        1 + \text{exp} / 25920000 & \text{| } \text{exp} / 25920000 \leq 2 \\
+                        3 + ln(1 + 0.1 * (\text{exp} / 25920000) - 2 ) & \text{| } \text{exp} / 25920000 > 2 
+                        \end{cases}
+                        \]
+                    </div>
+                </div>
+            </div>
+            <!-- Equation Group Separator for Visibility -->
+        </div>
+        <div class="content" id="content"> <!-- Main content -->
+            <!-- Place your main content here -->
+            <div id="equationContainer"></div>
+        </div>
+    </div>
+    <footer class="bordered-footer rainbow">
+        Made by Eevee
+    </footer>
+    <script src="FormulaCollectionScript.js"></script>
+</body>
+</html>

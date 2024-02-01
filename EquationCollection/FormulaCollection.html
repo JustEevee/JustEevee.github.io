@@ -85,15 +85,29 @@
                 <div class="Equation" style="display: none;">
                     <div class="equation-header">Rare Chance Battle Reward (Pentangle)</div>
                     <div class="equation-formula">
-                        \begin{cases} 
-                        1 + \text{raw} & \text{| } \text{raw} < 0.5 \\
-                        1.5 + 0.05 * (\text{raw} + 0.5) & \text{| } 0.5 \leq \text{raw} < 5.5 \\
-                        1.75 + 0.001 * (\text{raw} - 5.5) & \text{| } raw \geq 5.5
-                        \end{cases}
+                        \[
+                        \left\{ 
+                        \begin{array}{ll}
+                        1 + \text{raw} & \text{if } \text{raw} \leq 2 \\
+                        3 + 0.05 \times (\text{raw} - 2) & \text{if } 2 < \text{raw} \leq 262 \\
+                        16 + 0.001 \times (\text{raw} - 262) & \text{if } 262 < \text{raw}
+                        \end{array}
+                        \right.
+                        \]
+                        
+                        \[
+                        \left\{ 
+                        \begin{array}{ll}
+                        100\% & \text{until } +200\% \\
+                        5\% & \text{until } +1500\% \\
+                        0.1\% & \text{after}
+                        \end{array}
+                        \right.
+                        \]
                     </div>
                 </div>
                 <div class="Equation" style="display: none;">
-                    <div class="equation-header">Rare Chance 2 Loot</div>
+                    <div class="equation-header">Rare Drop Rate 2 (Li)</div>
                     <div class="equation-formula">
                         \begin{cases} 
                         1 + \text{raw} & \text{| } \text{raw} \leq 1 \\

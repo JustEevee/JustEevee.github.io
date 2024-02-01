@@ -88,14 +88,12 @@
                         \[
                         \left\{ 
                         \begin{array}{ll}
-                        1 + \text{raw} & \text{if } \text{raw} \leq 2 \\
-                        3 + 0.05 \times (\text{raw} - 2) & \text{if } 2 < \text{raw} \leq 262 \\
-                        16 + 0.001 \times (\text{raw} - 262) & \text{if } 262 < \text{raw}
+                        1 + \text{raw} & \text{| } \text{raw} \leq 2 \\
+                        3 + 0.05 \times (\text{raw} - 2) & \text{| } 2 < \text{raw} \leq 262 \\
+                        16 + 0.001 \times (\text{raw} - 262) & \text{| } 262 < \text{raw}
                         \end{array}
                         \right.
-                        \]
-                        
-                        \[
+                        \quad
                         \left\{ 
                         \begin{array}{ll}
                         100\% & \text{until } +200\% \\
